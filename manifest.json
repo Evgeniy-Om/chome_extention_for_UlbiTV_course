@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "UlbiTV курс",
+    "version": "1.1",
+    "description": "Пробел - пауза, минус/плюс - уменьшить/увеличить скорость",
+
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "css": [
+                "scripts/style.css"
+            ],
+            "matches": [
+                "https://ulbitv.ru/pl/teach/control/lesson*",
+                "https://player-ua.gceuproxy.com/sign-player/?json=*"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
