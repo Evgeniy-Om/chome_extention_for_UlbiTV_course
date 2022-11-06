@@ -2,7 +2,7 @@
     --color: black;
 }
 
-body {
+.window-player {
     position: relative;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -13,7 +13,7 @@ body {
     margin: 20px 0 0 auto;
 }
 
-.displaySpeed {
+.display-speed {
     position: absolute;
     right: 100px;
     bottom: 100px;

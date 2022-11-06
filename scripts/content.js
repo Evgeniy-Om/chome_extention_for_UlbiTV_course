@@ -1,20 +1,21 @@
 let timeoutID
 const showDisplaySpeed = (currentSpeedIndex) => {
-    let prevDisplaySpeed = document.querySelector('.displaySpeed')
+    let prevDisplaySpeed = document.querySelector('.display-speed')
     if (prevDisplaySpeed) document.body.removeChild(prevDisplaySpeed)
 
     const displaySpeed = document.createElement('div')
-    displaySpeed.classList.add('displaySpeed')
+    displaySpeed.classList.add('display-speed')
     displaySpeed.textContent = `Скорость ${currentSpeedIndex*0.25+0.5}x`
     document.body.appendChild(displaySpeed)
 
+    console.log(timeoutID)
     clearTimeout(timeoutID)
+
     timeoutID = setTimeout(() => {
-        let prevDisplaySpeed = document.querySelector('.displaySpeed')
+        let prevDisplaySpeed = document.querySelector('.display-speed')
         if (prevDisplaySpeed) document.body.removeChild(prevDisplaySpeed)
     },2000)
-
-
+    console.log(timeoutID)
 }
 
 if (window.location.host === 'ulbitv.ru') {
@@ -41,6 +42,7 @@ if (window.location.host === 'ulbitv.ru') {
 }
 
 if (window.location.host === 'player-ua.gceuproxy.com') {
+
     let play
 
     new Promise((resolve)=> {
@@ -54,8 +56,11 @@ if (window.location.host === 'player-ua.gceuproxy.com') {
         },500)
 
     }).then(()=> {
+        document.body.classList.add('window-player')
+
         const speeds = document.querySelectorAll(`[data-plyr="speed"]`)
         let currentSpeedIndex = Array.from(speeds).findIndex((value) => value.ariaChecked === 'true') ?? 2
+
         window.addEventListener('keydown', function(event) {
             if (event.code === "Space") {
                 play.click()
