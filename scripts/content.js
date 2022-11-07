@@ -65,13 +65,13 @@ if (window.location.host === 'player-ua.gceuproxy.com') {
                 play.click()
             }
 
-            if ((event.key === "+" || event.key === "=") && currentSpeedIndex < 6) {
+            if ((event.code === "Equal") && currentSpeedIndex < 6) {
                 speeds[++currentSpeedIndex].click()
                 showDisplaySpeed(currentSpeedIndex)
 
             }
 
-            if ((event.key === "-" || event.key === "_") && currentSpeedIndex > 0) {
+            if ((event.code === "Minus") && currentSpeedIndex > 0) {
                 speeds[--currentSpeedIndex].click()
                 showDisplaySpeed(currentSpeedIndex)
             }
