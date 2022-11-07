@@ -57,6 +57,7 @@ if (window.location.host === 'player-ua.gceuproxy.com') {
         document.body.classList.add('window-player')
 
         const speeds = document.querySelectorAll(`[data-plyr="speed"]`)
+        const fullscreen = document.querySelector(`[data-plyr="fullscreen"]`);
         let currentSpeedIndex = Array.from(speeds).findIndex((value) => value.ariaChecked === 'true') ?? 2
 
         window.addEventListener('keydown', function(event) {
@@ -73,6 +74,10 @@ if (window.location.host === 'player-ua.gceuproxy.com') {
             if ((event.key === "-" || event.key === "_") && currentSpeedIndex > 0) {
                 speeds[--currentSpeedIndex].click()
                 showDisplaySpeed(currentSpeedIndex)
+            }
+
+            if (event.code === 'KeyF') {
+                fullscreen.click();
             }
         })
     })
