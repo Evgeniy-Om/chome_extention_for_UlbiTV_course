@@ -2,8 +2,8 @@
 ## Хоткеи: пробел (пауза), минус/плюс (замедлить/ускорить воспроизведение)
 
 1. Склонируйте проект
-2. Перейти по ссылке: chrome://extensions/
-3. Выбрать "Режим разработчика"
+2. Перейдите по ссылке: chrome://extensions/
+3. Выберете "Режим разработчика"
 
    ![alt text](https://downloader.disk.yandex.ru/preview/c95592a9b18c59e9df00056b80dfb0396c9e9b8bd3c690be46112284a0104fc3/63682a68/PvPhWAVuToXS9k9YDNoCREadAYPiWVi7mZQ9t2iISXZJ2vstlfRN5a-8Gm9Z_s7-p3mrk1dEmg3ZokTSANJ1ng%3D%3D?uid=0&filename=2022-11-06_15-40-05.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
    
