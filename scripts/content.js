@@ -8,14 +8,12 @@ const showDisplaySpeed = (currentSpeedIndex) => {
     displaySpeed.textContent = `Скорость ${currentSpeedIndex*0.25+0.5}x`
     document.body.appendChild(displaySpeed)
 
-    console.log(timeoutID)
     clearTimeout(timeoutID)
 
     timeoutID = setTimeout(() => {
         let prevDisplaySpeed = document.querySelector('.display-speed')
         if (prevDisplaySpeed) document.body.removeChild(prevDisplaySpeed)
     },2000)
-    console.log(timeoutID)
 }
 
 if (window.location.host === 'ulbitv.ru') {
